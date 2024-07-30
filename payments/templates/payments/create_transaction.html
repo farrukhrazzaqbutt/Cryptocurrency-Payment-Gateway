@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Transaction</title>
+</head>
+<body>
+    <h1>Create Transaction</h1>
+    <form method="post" action="{% url 'create_transaction' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Transaction</button>
+    </form>
+</body>
+</html>
